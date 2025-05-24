@@ -53,7 +53,7 @@ def atualizar_livros(id):
 @app.route('/livros/<int:id>', methods=['DELETE'])
 def deletar_livro(id):
     id_certo = int(id)
-    livro = livro.query.get(id_certo)
+    livro = Livro.query.get(id_certo)
     if not livro:
         return jsonify({'erro': 'Livro não encontrado'}), 404
     db.session.delete(livro)
