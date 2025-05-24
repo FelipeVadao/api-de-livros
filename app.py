@@ -48,7 +48,7 @@ def atualizar_livros(id):
     livro.autor = data['autor']
     livro.ano = data.get('ano')
     db.session.commit()
-    return jsonify({'mensagem:' 'Livro atualizado com sucesso'})
+    return jsonify({'mensagem': 'Livro atualizado com sucesso'})
 
 @app.route('/livros/<int:id>', methods=['DELETE'])
 def deletar_livro(id):
